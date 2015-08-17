@@ -81,15 +81,9 @@ describe("DbPersistence Test Suite", function(){
 
 		contactsDb.UpdateContact(larryContact.id,"32003200", function(err, result){
 
-			contactsDb.ReadContacts(function(err, result){
-	
-				readContacts = result;
-				expect(readContacts.length).toBe(3);
-				expect(readContacts[1].firstName).toBe("Larry");
-				expect(readContacts[1].phone).toBe("32003200");
-				done();
-
-			});
+			expect(result.firstName).toBe("Larry");
+			expect(result.phone).toBe("32003200");
+			done();
 		});
 
 	});
