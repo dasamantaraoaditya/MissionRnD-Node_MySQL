@@ -19,6 +19,10 @@ exports.GetConnection = function(){
 	return theConnection;
 }
 
+exports.EndConnection = function(){
+	
+}
+
 /*
 OVERVIEW: 	AddContact function takes a contact object and inserts it into the contacts table in mysql db.
 
@@ -105,4 +109,3 @@ ERROR CASES: error object should be passed to callback().
 exports.DeleteContact = function(id, callback){
 
 }
-

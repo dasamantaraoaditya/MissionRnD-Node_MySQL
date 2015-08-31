@@ -12,8 +12,10 @@ describe("DbPersistence Test Suite", function(){
 	var larryContact = new Contact("Larry", "Page", "23002300");
 	var billContact = new Contact("Bill", "Gates", "23002300");
 
+	var jasmine = require("./jasmine-beforeAll.js");
 
-	beforeAll(function(done){
+	beforeAll(function(){
+		
 		var connection = contactsDb.GetConnection();
 
 		connection.query("delete from contacts", function(err, result){
@@ -21,11 +23,12 @@ describe("DbPersistence Test Suite", function(){
 				console.log(err);
 				throw err;
 			}
-			done();
-
 		});
 
+	});
 
+	afterAll(function(){
+		contactsDb.EndConnection();
 	});
 
 	it("should add contacts",function(done){
