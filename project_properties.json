@@ -1,0 +1,1 @@
+{"project_name":"Node_MySQL","project_gitrepo":"https://github.com/mission-rnd/mrnd-nodejs-mysql","project_page":"http://mission-rnd.github.io/nodejs_mysql.htm","language":"javascript","project_validator":"jasmine-node --junitreport --captureExceptions spec/tests/","project_steps":["DbPersistence"]}
